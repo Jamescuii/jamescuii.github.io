@@ -233,10 +233,17 @@ const Footer = () => (
 
 // ------ MAIN APP COMPONENT ------
 export default function App() {
-  // State to manage the current theme, defaulting to 'dark'
-  const [theme, setTheme] = useState('dark');
+  // State to manage the theme. It now checks localStorage and system preference for the initial value.
+  const [theme, setTheme] = useState(() => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      return savedTheme;
+    }
+    // Check system preference if no theme is saved
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  });
 
-  // Effect to add/remove the 'dark' class from the html element
+  // Effect to update the class on the <html> element and save the theme to localStorage
   useEffect(() => {
     const root = window.document.documentElement;
     if (theme === 'dark') {
@@ -244,17 +251,11 @@ export default function App() {
     } else {
       root.classList.remove('dark');
     }
+    localStorage.setItem('theme', theme);
   }, [theme]);
   
-  // This is a simplified setup. For a real app, you would need to configure
-  // Tailwind CSS to use the 'dark' class for dark mode.
-  // Add the following to your tailwind.config.js: darkMode: 'class',
-
   return (
-    // The main container for the app
-    // Styles change based on the theme state
-    <div className="bg-white text-gray-800 dark:bg-black dark:text-gray-300 antialiased">
-      {/* The background pattern is now a separate div to be behind content */}
+    <div className="bg-white text-gray-800 dark:bg-black dark:text-gray-300 antialiased transition-colors duration-300">
       <div className="fixed inset-0 z-[-1] bg-white dark:bg-black bg-dot-gray-300 dark:bg-dot-gray-800"></div>
       
       <Header theme={theme} setTheme={setTheme} />
@@ -269,9 +270,17 @@ export default function App() {
       
       <Footer />
       
-      {/* This is a standard <style> tag. The `jsx` and `global` attributes
-        are part of a library called `styled-jsx` and are not standard in React,
-        which caused the warnings. Removing them fixes the issue.
+      {/* CRITICAL FOR DARK MODE:
+        For the `dark:` classes (like `dark:bg-black`) to work, you MUST configure Tailwind CSS.
+        If you are using a `tailwind.config.js` file, make sure it includes this line:
+        
+        module.exports = {
+          darkMode: 'class', // This is the essential line
+          // ... other configurations
+        }
+
+        Without this setting, Tailwind doesn't know how to apply the dark theme styles,
+        which is why the background was staying white and the icons were not styled correctly in dark mode.
       */}
       <style>{`
         .dark .bg-dot-gray-800 {
