@@ -1,6 +1,6 @@
  James Cui - Personal Portfolio
 
-This is the source code for my personal portfolio website, built to showcase my skills, projects, and professional experience. The site is a modern, single-page application designed to be sleek, responsive, and easy to navigate.
+This is the source code for my personal portfolio website, built to showcase my skills, projects, and professional experience. The site is a modern, single-page application designed to be sleek and easy to navigate.
 
 ## ✨ Features
 
@@ -11,7 +11,7 @@ This is the source code for my personal portfolio website, built to showcase my 
 
 ## 🛠️ Tech Stack
 
-* **React:** A JavaScript library for building user interfaces.
+* **React:** A JavaScript library for building user interfaces. [Currently not used]
 * **Tailwind CSS:** A utility-first CSS framework for rapid and custom styling.
 * **JavaScript (ES6+):** The core programming language.
 * **HTML5 & CSS3:** For structure and custom styling.
