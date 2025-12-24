@@ -1,17 +1,25 @@
- James Cui - Personal Portfolio
+James Cui - Personal Website
 
-This is the source code for my personal portfolio website, built to showcase my skills, projects, and professional experience. The site is a modern, single-page application designed to be sleek and easy to navigate.
+This repo hosts my personal website (GitHub Pages) built as a modern, responsive single-page portfolio/resume.
 
 ## ✨ Features
 
-* **Single-Page Layout:** A smooth-scrolling interface that allows for seamless navigation between sections.
-* **Responsive Design:** Fully responsive layout that looks great on desktops, tablets, and mobile devices.
-* **Dynamic Theme:** A light/dark mode toggle to switch between themes based on user preference.
-* **Component-Based Architecture:** Built with reusable React components for clean code and easy maintenance.
+- **Single-page layout**: Smooth-scrolling sections (Experience, Projects, Skills, Education, Contact).
+- **Responsive design**: Works well on mobile + desktop.
+- **Fast and simple**: Static `index.html` (no build step).
 
 ## 🛠️ Tech Stack
 
-* **React:** A JavaScript library for building user interfaces. [Currently not used]
-* **Tailwind CSS:** A utility-first CSS framework for rapid and custom styling.
-* **JavaScript (ES6+):** The core programming language.
-* **HTML5 & CSS3:** For structure and custom styling.
+- **HTML**: Content/structure
+- **Tailwind CSS (CDN)**: Styling (`https://cdn.tailwindcss.com`)
+- **Vanilla JavaScript**: Mobile nav + section fade-in
+
+## ✅ Common edits
+
+- **Update links (LinkedIn / Outlier / MiniSpark)**: Search for `href="#"` in `index.html` and replace with your real URLs.
+- **Resume download button**: Add your PDF to the repo root named `James_Cui_Official_Resume.pdf` (or rename the link in `index.html`).
+- **Contact info**: Update in the hero + footer (email/phone) in `index.html`.
+
+## 🚀 Deploy
+
+Push to `main` and enable GitHub Pages for this repo (Settings → Pages).

@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>James Cui - Software Engineer</title>
+    <title>James Cui — AI Engineer / Software Engineer</title>
+    <meta name="description" content="James Cui — AI Engineer & Software Engineer. Experience in agentic RAG/MCP pipelines, computer vision research, and backend services. UW–Madison CS + Math." />
+    <meta name="theme-color" content="#0a0a0a" />
+    <meta property="og:title" content="James Cui — AI Engineer / Software Engineer" />
+    <meta property="og:description" content="Experience in agentic evaluation pipelines (RAG + MCP), computer vision research, and backend services. UW–Madison CS + Math." />
+    <meta property="og:type" content="website" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,6 +37,12 @@
             -webkit-backdrop-filter: blur(10px);
             border: 1px solid rgba(45, 45, 45, 0.5);
         }
+
+        /* Better keyboard focus */
+        :focus-visible {
+            outline: 2px solid rgba(34, 211, 238, 0.9);
+            outline-offset: 3px;
+        }
     </style>
 </head>
 <body class="bg-black text-gray-300 antialiased">
@@ -41,10 +52,10 @@
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-xl font-bold text-white">James Cui</a>
             <nav class="hidden md:flex space-x-8">
-                <a href="#about" class="hover:text-cyan-400 transition-colors">About</a>
-                <a href="#skills" class="hover:text-cyan-400 transition-colors">Skills</a>
-                <a href="#projects" class="hover:text-cyan-400 transition-colors">Projects</a>
                 <a href="#experience" class="hover:text-cyan-400 transition-colors">Experience</a>
+                <a href="#projects" class="hover:text-cyan-400 transition-colors">Projects</a>
+                <a href="#skills" class="hover:text-cyan-400 transition-colors">Skills</a>
+                <a href="#education" class="hover:text-cyan-400 transition-colors">Education</a>
                 <a href="#contact" class="hover:text-cyan-400 transition-colors">Contact</a>
             </nav>
             <button id="mobile-menu-button" class="md:hidden text-white">
@@ -55,10 +66,10 @@
         </div>
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
-            <a href="#about" class="block py-2 hover:text-cyan-400">About</a>
-            <a href="#skills" class="block py-2 hover:text-cyan-400">Skills</a>
-            <a href="#projects" class="block py-2 hover:text-cyan-400">Projects</a>
             <a href="#experience" class="block py-2 hover:text-cyan-400">Experience</a>
+            <a href="#projects" class="block py-2 hover:text-cyan-400">Projects</a>
+            <a href="#skills" class="block py-2 hover:text-cyan-400">Skills</a>
+            <a href="#education" class="block py-2 hover:text-cyan-400">Education</a>
             <a href="#contact" class="block py-2 hover:text-cyan-400">Contact</a>
         </div>
     </header>
@@ -68,26 +79,92 @@
         <!-- Hero Section -->
         <section id="hero" class="min-h-screen flex flex-col justify-center items-start text-left fade-in">
             <h1 class="text-5xl md:text-7xl font-bold text-white leading-tight">James Cui</h1>
-            <h2 class="text-2xl md:text-3xl font-medium text-gray-400 mt-2">Computer Science Student @ UW-Madison</h2>
-            <p class="max-w-2xl mt-6 text-lg text-gray-400">
-                Looking for Software Engineering Experience with a passion for machine learning, distributed systems, and building impactful technology. Currently exploring the intersections of AI and Software Engineering development.
-            </p>
-            <div class="mt-8 flex space-x-4">
-                <a href="#projects" class="bg-cyan-500 text-white font-semibold px-6 py-3 rounded-md hover:bg-cyan-600 transition-transform transform hover:scale-105">My Projects</a>
-                <a href="mailto:jamescui626@gmail.com" class="border border-gray-600 text-white font-semibold px-6 py-3 rounded-md hover:bg-gray-800 transition-all">My Contacts</a>
+            <h2 class="text-2xl md:text-3xl font-medium text-gray-300 mt-3">AI Engineer · Software Engineer</h2>
+            <div class="mt-6 flex flex-col gap-3 text-gray-400">
+                <p class="max-w-2xl text-lg">
+                    I build agentic systems and backend services—recently focusing on RAG + MCP pipelines, web automation/scraping, and applied computer vision.
+                </p>
+                <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+                    <span><span class="text-gray-500">Email:</span> <a class="hover:text-cyan-400 underline-offset-4 hover:underline" href="mailto:jamescui262@gmail.com">jamescui262@gmail.com</a></span>
+                    <span><span class="text-gray-500">Phone:</span> <a class="hover:text-cyan-400 underline-offset-4 hover:underline" href="tel:+19785056459">978-505-6459</a></span>
+                    <span><span class="text-gray-500">Location:</span> Madison, WI</span>
+                </div>
+            </div>
+
+            <div class="mt-8 flex flex-wrap gap-3">
+                <a href="#experience" class="bg-cyan-500 text-white font-semibold px-6 py-3 rounded-md hover:bg-cyan-600 transition-transform transform hover:scale-[1.02]">Experience</a>
+                <a href="#projects" class="border border-gray-700 text-white font-semibold px-6 py-3 rounded-md hover:bg-gray-900 transition-all">Projects</a>
+                <a href="James_Cui_Official_Resume.pdf" class="border border-gray-700 text-white font-semibold px-6 py-3 rounded-md hover:bg-gray-900 transition-all">Download Resume (PDF)</a>
+            </div>
+
+            <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-4 w-full max-w-5xl">
+                <div class="glass-card rounded-xl p-5">
+                    <div class="text-sm text-gray-500">Now</div>
+                    <div class="text-white font-semibold mt-1">AI Engineer @ PaperScore</div>
+                    <div class="text-gray-400 text-sm mt-1">Building agentic evaluation + web automation.</div>
+                </div>
+                <div class="glass-card rounded-xl p-5">
+                    <div class="text-sm text-gray-500">Focus</div>
+                    <div class="text-white font-semibold mt-1">RAG · MCP · Web Automation</div>
+                    <div class="text-gray-400 text-sm mt-1">Pipelines, tooling, reliability.</div>
+                </div>
+                <div class="glass-card rounded-xl p-5">
+                    <div class="text-sm text-gray-500">Background</div>
+                    <div class="text-white font-semibold mt-1">UW–Madison CS + Math</div>
+                    <div class="text-gray-400 text-sm mt-1">GPA 3.92 · Aug 2025</div>
+                </div>
             </div>
         </section>
 
-        <!-- About Me -->
-        <section id="about" class="py-20">
-            <h2 class="text-4xl font-bold text-white text-center mb-12">About Me</h2>
-            <div class="glass-card rounded-xl p-8 md:p-12 max-w-4xl mx-auto">
-                <p class="text-lg leading-relaxed">
-                    I am a Computer Science student at the University of Wisconsin-Madison with a GPA of 3.93. My coursework in Advanced Algorithms, Software Engineering, and Deep Learning has provided me with a strong theoretical foundation, which I hope to use to resolve real-world problems.
-                </p>
-                <p class="text-lg leading-relaxed mt-4">
-                    I hope to learn something new everyday whether it be Machine Learning or Embedded Software. I've worked as a Peer Mentor and AI Research Assistant in hopes of one day being able to combine my experience in both fields to develop scalable and intelligent software.
-                </p>
+        <!-- Experience -->
+        <section id="experience" class="py-20">
+            <h2 class="text-4xl font-bold text-white text-center mb-12">Experience</h2>
+            <div class="max-w-4xl mx-auto space-y-8">
+                <div class="glass-card rounded-xl p-8">
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
+                        <div>
+                            <h3 class="text-xl font-bold text-white">AI Engineer</h3>
+                            <p class="text-cyan-400">PaperScore · Acton, MA</p>
+                        </div>
+                        <p class="text-gray-400 text-sm">Sept 2025 – Present</p>
+                    </div>
+                    <ul class="list-disc list-inside mt-4 text-gray-400 space-y-2">
+                        <li>Architected a multi-agent evaluation pipeline using RAG and MCP to assess novelty of incoming manuscripts.</li>
+                        <li>Built an agentic web scraper (Browser Use) that autonomously parses and indexes 30+ journals per hour.</li>
+                        <li>Engineered C# backend services with intelligent rate limiting + semaphores, reducing external failure rates by 80%.</li>
+                        <li>Translated ambiguous ideas into actionable requirements and pitched strategies directly to the CEO.</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card rounded-xl p-8">
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Computer Vision Research Assistant</h3>
+                            <p class="text-cyan-400">MadAbility Research Group · Madison, WI</p>
+                        </div>
+                        <p class="text-gray-400 text-sm">Jun 2024 – May 2025</p>
+                    </div>
+                    <ul class="list-disc list-inside mt-4 text-gray-400 space-y-2">
+                        <li>Annotated 250+ images in Roboflow and trained a YOLO model in PyTorch, 15% more accurate than COCO baseline.</li>
+                        <li>Integrated OpenAI Vision with Python to generate real-time, personalized feedback from user image analysis.</li>
+                        <li>Developed interactive Unity C# AR barriers for OCD therapy, improving zone avoidance success rates by 60%+.</li>
+                        <li>Researched object detection + AR strategies to define core technical requirements for OCD assistive technology.</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card rounded-xl p-8">
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
+                        <div>
+                            <h3 class="text-xl font-bold text-white">CS506 Software Engineering Peer Mentor</h3>
+                            <p class="text-cyan-400">University of Wisconsin–Madison · Madison, WI</p>
+                        </div>
+                        <p class="text-gray-400 text-sm">Jan 2025 – May 2025</p>
+                    </div>
+                    <ul class="list-disc list-inside mt-4 text-gray-400 space-y-2">
+                        <li>Assisted 200+ students during weekly tutorials on Agile, Maven, testing tools, and deployment workflows.</li>
+                        <li>Mentored 50+ students one-on-one on Git, Scrum processes, and Docker setup.</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
@@ -107,6 +184,7 @@
                         <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">TypeScript</span>
                         <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Go</span>
                         <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Bash</span>
+                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">C#</span>
                     </div>
                 </div>
                 <!-- Frameworks & Libraries -->
@@ -116,10 +194,12 @@
                         <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">PyTorch</span>
                         <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">TensorFlow</span>
                         <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Spring Boot</span>
+                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Browser Use</span>
+                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Playwright</span>
                         <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">React</span>
                         <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Node.js</span>
-                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">NumPy</span>
-                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Pandas</span>
+                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">MCP</span>
+                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">RAG</span>
                         <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">JUnit</span>
                     </div>
                 </div>
@@ -132,9 +212,14 @@
                         <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Linux/Unix</span>
                         <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">AWS</span>
                         <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Google Cloud</span>
-                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Agile/Scrum</span>
+                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Jenkins</span>
+                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Roboflow</span>
+                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Postman</span>
+                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Agile (Scrum/Kanban)</span>
                         <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">CI/CD</span>
-                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">RESTful APIs</span>
+                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">RESTful</span>
+                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Unit Testing</span>
+                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">TCP/IP</span>
                     </div>
                 </div>
             </div>
@@ -147,93 +232,93 @@
                 <!-- Project Card 1 -->
                 <div class="glass-card rounded-xl p-6 flex flex-col h-full">
                     <h3 class="text-2xl font-semibold text-white mb-2">Neural Machine Translator</h3>
-                    <p class="text-gray-400 mb-4 flex-grow">Engineered a sequence-to-sequence translation system by fine-tuning a BART (Transformer) model, achieving a 4x improvement in BLEU score over baseline.</p>
+                    <p class="text-gray-400 mb-4 flex-grow">Fine-tuned a pre-trained BART Transformer to build a seq-to-seq translation system; added a robust PyTorch data pipeline and evaluation with BLEU.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Python</span>
                         <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">PyTorch</span>
                         <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Transformers</span>
-                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">NLTK</span>
+                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">NLP</span>
                     </div>
                     <a href="https://github.com/Jamescuii/AI-Translator/tree/main" target = "_blank" class="text-cyan-400 font-semibold hover:underline mt-auto">View Code &rarr;</a>
                 </div>
                 <!-- Project Card 2 -->
                 <div class="glass-card rounded-xl p-6 flex flex-col h-full">
-                    <h3 class="text-2xl font-semibold text-white mb-2">FCOS Object Detection</h3>
-                    <p class="text-gray-400 mb-4 flex-grow">Implemented a Fully Convolutional One-Stage (FCOS) object detector from scratch, reaching 37.2% mAP on the PASCAL VOC validation dataset.</p>
+                    <h3 class="text-2xl font-semibold text-white mb-2">Outlier</h3>
+                    <p class="text-gray-400 mb-4 flex-grow">Full-stack puzzle game with responsive UI and user authentication; automated daily puzzle generation + deployment via Google Gemini API.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">HTML/CSS</span>
                         <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Python</span>
-                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">PyTorch</span>
-                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">RegNet</span>
-                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">FPN</span>
-                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">CUDA</span>
+                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Firebase Auth</span>
+                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Gemini API</span>
                     </div>
-                    <a href="https://github.com/Jamescuii/FCOS-Object-Detector" target = "_blank" class="text-cyan-400 font-semibold hover:underline mt-auto">View Code &rarr;</a>
+                    <div class="mt-auto flex flex-col gap-2">
+                        <a href="#" class="text-cyan-400 font-semibold hover:underline">Live App &rarr;</a>
+                        <a href="#" class="text-cyan-400 font-semibold hover:underline">View Code &rarr;</a>
+                    </div>
                 </div>
                 <!-- Project Card 3 -->
                 <div class="glass-card rounded-xl p-6 flex flex-col h-full">
                     <h3 class="text-2xl font-semibold text-white mb-2">Smart Stock Inventory System</h3>
-                    <p class="text-gray-400 mb-4 flex-grow">Led backend development for a full-stack retail/warehouse inventory system, featuring secure login and role-based access. Containerized the full application for consistent deployment.</p>
+                    <p class="text-gray-400 mb-4 flex-grow">Full-stack retail + warehouse inventory system: secure login, role-based access (Spring Security), and a Dockerized multi-service deployment.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Java</span>
                         <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Spring Boot</span>
                         <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Docker</span>
-                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Javascript</span>
-                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Jenkins</span>
                         <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">React</span>
                         <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">SQL</span>
                     </div>
-                    <a href="https://www.youtube.com/watch?v=UdpCZbpySxM&feature=youtu.be" target = "_blank" class="text-cyan-400 font-semibold hover:underline mt-auto">View Demo &rarr;</a>
-                    <a href="https://github.com/Jamescuii/Inventory-Management-System" target = "_blank" class="text-cyan-400 font-semibold hover:underline mt-auto">View Code &rarr;</a>
+                    <div class="mt-auto flex flex-col gap-2">
+                        <a href="https://www.youtube.com/watch?v=UdpCZbpySxM&feature=youtu.be" target="_blank" rel="noreferrer" class="text-cyan-400 font-semibold hover:underline">Live Demo &rarr;</a>
+                        <a href="https://github.com/Jamescuii/Inventory-Management-System" target="_blank" rel="noreferrer" class="text-cyan-400 font-semibold hover:underline">View Code &rarr;</a>
+                    </div>
                 </div>
                 <!-- Project Card 4 -->
                 <div class="glass-card rounded-xl p-6 flex flex-col h-full">
-                    <h3 class="text-2xl font-semibold text-white mb-2">Music Player Library</h3>
-                    <p class="text-gray-400 mb-4 flex-grow">Led a team of 4 to create a custom data structure in Java to parse, sort, and visualize CSV data as a music playlist, ensuring quality with robust JUnit testing.</p>
+                    <h3 class="text-2xl font-semibold text-white mb-2">MiniSpark</h3>
+                    <p class="text-gray-400 mb-4 flex-grow">High-performance, multi-threaded C processing framework from scratch, architecturally inspired by Apache Spark.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Java</span>
-                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">JSON</span>
-                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Data Structures</span>
-                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">OOP</span>
-                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">JUnit</span>
+                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">C</span>
+                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Multi-threading</span>
+                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Systems</span>
+                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Git</span>
                     </div>
-                    <a href="https://github.com/Jamescuii/School-Projects/tree/main/Music%20Player" target = "_blank"  class="text-cyan-400 font-semibold hover:underline mt-auto">View Code &rarr;</a>
+                    <a href="#" class="text-cyan-400 font-semibold hover:underline mt-auto">View Code &rarr;</a>
                 </div>
             </div>
         </section>
 
-        <!-- Experience -->
-        <section id="experience" class="py-20">
-            <h2 class="text-4xl font-bold text-white text-center mb-12">Experience</h2>
-            <div class="max-w-4xl mx-auto space-y-8">
-                 <div class="glass-card rounded-xl p-8">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="text-xl font-bold text-white">CS 506 (Software Engineering) Peer Mentor</h3>
-                            <p class="text-cyan-400">University of Wisconsin-Madison</p>
-                        </div>
-                        <p class="text-gray-400 text-sm">Jan 2025 - May 2025</p>
+        <!-- Education -->
+        <section id="education" class="py-20">
+            <h2 class="text-4xl font-bold text-white text-center mb-12">Education</h2>
+            <div class="glass-card rounded-xl p-8 max-w-4xl mx-auto">
+                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
+                    <div>
+                        <h3 class="text-xl font-bold text-white">University of Wisconsin–Madison</h3>
+                        <p class="text-gray-400">B.S. Computer Science · Certificate in Mathematics</p>
                     </div>
-                    <ul class="list-disc list-inside mt-4 text-gray-400 space-y-2">
-                        <li>Co-led weekly tutorials for 200+ students on Agile, Maven, testing tools, and deployment workflows.</li>
-                        <li>Mentored 20+ students one-on-one on Git, Scrum processes, and Docker setup.</li>
-                        <li>Collaborated with TAs to create hands-on exercises, increasing student engagement in lab sessions.</li>
-                        
-                    </ul>
+                    <p class="text-gray-400 text-sm">Aug 2025</p>
                 </div>
-                 <div class="glass-card rounded-xl p-8">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="text-xl font-bold text-white">Computer Vision Research Assistant</h3>
-                            <p class="text-cyan-400">MadAbility Research Group</p>
-                        </div>
-                        <p class="text-gray-400 text-sm">Jun 2024 - May 2025</p>
+                <div class="mt-4 flex flex-wrap gap-3 text-sm text-gray-400">
+                    <span class="bg-gray-900/60 border border-gray-800 px-3 py-1 rounded-full">GPA: 3.92 / 4.0</span>
+                    <span class="bg-gray-900/60 border border-gray-800 px-3 py-1 rounded-full">Academic Excellence Scholar</span>
+                    <span class="bg-gray-900/60 border border-gray-800 px-3 py-1 rounded-full">Dean’s List (x5)</span>
+                </div>
+                <div class="mt-6">
+                    <div class="text-gray-500 text-sm mb-2">Relevant coursework</div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Algorithms</span>
+                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Software Engineering</span>
+                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Operating Systems</span>
+                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Data Structures</span>
+                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Artificial Intelligence</span>
+                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Deep Learning</span>
+                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Databases</span>
+                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Computer Networks</span>
+                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">OOP</span>
+                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Computer Graphics</span>
+                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Combinatorics</span>
                     </div>
-                    <ul class="list-disc list-inside mt-4 text-gray-400 space-y-2">
-                        <li>Annotated 1,000+ images and trained a YOLO model in PyTorch with 15% higher accuracy than baseline.</li>
-                        <li>Integrated OpenAI API to provide real-time personalized feedback from image analysis.</li>
-                        <li>Developed Unity C# AR barriers that improved OCD zone avoidance success rates by 60%.</li>
-                        <li>Researched object detection + AR strategies to support assistive technology for OCD patients.</li>
-                    </ul>
                 </div>
             </div>
         </section>
@@ -243,25 +328,46 @@
     <!-- Footer -->
     <footer id="contact" class="border-t border-gray-800 mt-20">
         <div class="container mx-auto px-6 py-12 text-center">
-            <h2 class="text-3xl font-bold text-white mb-4">My Contacts</h2>
+            <h2 class="text-3xl font-bold text-white mb-4">Contact</h2>
             <p class="text-gray-400 mb-8 max-w-xl mx-auto">
-                I'm currently seeking Software Engineering internship opportunities. If you have a role that you think would be a good fit, or if you just want to connect, please feel free to reach out!
+                If you want to collaborate or chat about agentic systems, backend reliability, or applied ML, feel free to reach out.
             </p>
+            <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-8 text-gray-400">
+                <a class="hover:text-cyan-400 underline-offset-4 hover:underline" href="mailto:jamescui262@gmail.com">jamescui262@gmail.com</a>
+                <span class="text-gray-600">·</span>
+                <a class="hover:text-cyan-400 underline-offset-4 hover:underline" href="tel:+19785056459">978-505-6459</a>
+            </div>
             <div class="flex justify-center space-x-6">
                 <!-- Replace # with your actual profile URLs -->
-                <a href="mailto:jamescui626@gmail.com" class="text-gray-400 hover:text-cyan-400 transition-colors">
+                <a href="mailto:jamescui262@gmail.com" class="text-gray-400 hover:text-cyan-400 transition-colors" aria-label="Email">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                 </a>
-                <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">
+                <a href="https://github.com/Jamescuii" target="_blank" rel="noreferrer" class="text-gray-400 hover:text-cyan-400 transition-colors" aria-label="GitHub">
                      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                 </a>
-                <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">
+                <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors" aria-label="LinkedIn">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                 </a>
             </div>
             <p class="text-gray-600 mt-12 text-sm">&copy; 2025 James Cui.</p>
         </div>
     </footer>
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "James Cui",
+            "email": "mailto:jamescui262@gmail.com",
+            "telephone": "+1-978-505-6459",
+            "jobTitle": ["AI Engineer", "Software Engineer"],
+            "alumniOf": {
+                "@type": "CollegeOrUniversity",
+                "name": "University of Wisconsin–Madison"
+            },
+            "url": "https://jamescuii.github.io/"
+        }
+    </script>
 
     <script>
         // Mobile menu toggle
