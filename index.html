@@ -50,7 +50,7 @@
     <!-- Header -->
     <header class="fixed top-0 left-0 right-0 z-50 bg-black/50 backdrop-blur-sm">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold text-white">James Cui</a>
+            <a href="#hero" class="text-xl font-bold text-white">James Cui</a>
             <nav class="hidden md:flex space-x-8">
                 <a href="#experience" class="hover:text-cyan-400 transition-colors">Experience</a>
                 <a href="#projects" class="hover:text-cyan-400 transition-colors">Projects</a>
@@ -94,7 +94,7 @@
             <div class="mt-8 flex flex-wrap gap-3">
                 <a href="#experience" class="bg-cyan-500 text-white font-semibold px-6 py-3 rounded-md hover:bg-cyan-600 transition-transform transform hover:scale-[1.02]">Experience</a>
                 <a href="#projects" class="border border-gray-700 text-white font-semibold px-6 py-3 rounded-md hover:bg-gray-900 transition-all">Projects</a>
-                <a href="James_Cui_Official_Resume.pdf" class="border border-gray-700 text-white font-semibold px-6 py-3 rounded-md hover:bg-gray-900 transition-all">Download Resume (PDF)</a>
+                <a id="resume-download" href="James_Cui_Official_Resume.pdf" download class="border border-gray-700 text-white font-semibold px-6 py-3 rounded-md hover:bg-gray-900 transition-all">Download Resume (PDF)</a>
             </div>
 
             <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-4 w-full max-w-5xl">
@@ -253,8 +253,8 @@
                         <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Gemini API</span>
                     </div>
                     <div class="mt-auto flex flex-col gap-2">
-                        <a href="#" class="text-cyan-400 font-semibold hover:underline">Live App &rarr;</a>
-                        <a href="#" class="text-cyan-400 font-semibold hover:underline">View Code &rarr;</a>
+                        <a href="https://jambosslol.github.io/" target="_blank" rel="noreferrer" class="text-cyan-400 font-semibold hover:underline">Live App &rarr;</a>
+                        <a href="https://github.com/jambosslol/jambosslol.github.io" target="_blank" rel="noreferrer" class="text-cyan-400 font-semibold hover:underline">View Code &rarr;</a>
                     </div>
                 </div>
                 <!-- Project Card 3 -->
@@ -283,7 +283,7 @@
                         <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Systems</span>
                         <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Git</span>
                     </div>
-                    <a href="#" class="text-cyan-400 font-semibold hover:underline mt-auto">View Code &rarr;</a>
+                    <a href="https://github.com/Jamescuii/MiniSpark" target="_blank" rel="noreferrer" class="text-cyan-400 font-semibold hover:underline mt-auto">View Code &rarr;</a>
                 </div>
             </div>
         </section>
@@ -370,6 +370,20 @@
     </script>
 
     <script>
+        // Hide resume link if the PDF isn't present in the deployed site.
+        // (Upload `James_Cui_Official_Resume.pdf` to the repo root to enable.)
+        (async () => {
+            const el = document.getElementById('resume-download');
+            if (!el) return;
+            try {
+                const href = el.getAttribute('href');
+                const res = await fetch(href, { method: 'HEAD' });
+                if (!res.ok) el.classList.add('hidden');
+            } catch {
+                // If fetch fails (offline / blocked), keep the link visible.
+            }
+        })();
+
         // Mobile menu toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
